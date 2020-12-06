@@ -1,0 +1,102 @@
+{
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "extends": ["airbnb-base"],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": ["@typescript-eslint"],
+  "rules": {
+    "no-undef": "off",
+    "func-names": "off",
+    "linebreak-style": 0,
+    "prefer-arrow-callback": "off",
+    "only-arrow-functions": "off",
+    "space-before-function-paren": "off",
+    "no-await-in-loop": "warn",
+    "no-restricted-syntax": "off",
+    "no-throw-literal": "off",
+    "no-param-reassign": "warn",
+    "arrow-body-style": "off",
+    "import/prefer-default-export": "off",
+    "array-bracket-spacing": [2, "always"],
+    "no-unused-vars": "error",
+    "@typescript-eslint/no-unused-vars": "error",
+    "key-spacing": [
+      "error",
+      {
+        "align": { "beforeColon": true, "afterColon": true, "on": "colon" }
+      }
+    ],
+    "global-require": "off",
+    "import/no-dynamic-require": "off",
+    "quotes": ["error", "single", { "allowTemplateLiterals": true }],
+    "class-methods-use-this": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    "camelcase": "off",
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": "default",
+        "format": ["camelCase"]
+      },
+      {
+        "selector": "property",
+        "format": ["camelCase", "snake_case", "PascalCase"]
+      },
+      {
+        "selector": "enumMember",
+        "format": ["camelCase", "snake_case", "PascalCase"]
+      },
+      {
+        "selector": "class",
+        "format": ["PascalCase"]
+      },
+      {
+        "selector": "interface",
+        "format": ["PascalCase"]
+      },
+      {
+        "selector": "enum",
+        "format": ["PascalCase"]
+      },
+      {
+        "selector": "variable",
+        "format": ["camelCase", "PascalCase"]
+      },
+      {
+        "selector": "parameterProperty",
+        "format": ["camelCase", "PascalCase"]
+      },
+      {
+        "selector": "parameter",
+        "format": ["camelCase", "PascalCase"]
+      }
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {},
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  }
+}
